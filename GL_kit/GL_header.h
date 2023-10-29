@@ -49,6 +49,5 @@ void keyDown(unsigned char KEY, int x, int y);
 void keyUp(unsigned char KEY, int x, int y);
 void timerOperation(int value);
 
-void modelOutput(int idx);
 GLvoid displayOutput();
 GLvoid displayReshape(int w, int h);
