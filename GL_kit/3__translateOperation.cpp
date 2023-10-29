@@ -37,3 +37,12 @@ void finishTransform(int idx) {
 	glUniformMatrix4fv(transformLocation, 1, GL_FALSE, value_ptr(transformMatrix));
 	glBindVertexArray(VAO[idx]);
 }
+
+void modelOutput(int idx) {
+	switch (idx) {
+	case 0:
+		//glDrawElements(GL_TRIANGLES, sizeof(), GL_UNSIGNED_INT, 0);  
+		break;
+	}
+}
+
