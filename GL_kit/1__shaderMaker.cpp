@@ -17,7 +17,7 @@ char* loadBuffer(const char* file) {
 }
 
 void makeVertexShader() {
-	vertexSource = loadBuffer("8__vertex.glsl");
+	vertexSource = loadBuffer("7__vertex.glsl");
 	vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	glShaderSource(vertexShader, 1, (const GLchar**)&vertexSource, 0);
 	glCompileShader(vertexShader);
@@ -33,7 +33,7 @@ void makeVertexShader() {
 }
 
 void makeFragProgram() {
-	fragmentSource = loadBuffer("9__fragment.glsl");
+	fragmentSource = loadBuffer("8__fragment.glsl");
 	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 	glShaderSource(fragmentShader, 1, (const GLchar**)&fragmentSource, 0);
 	glCompileShader(fragmentShader);
