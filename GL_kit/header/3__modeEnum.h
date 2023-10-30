@@ -1,4 +1,4 @@
-//  모드 열거형
+// 모드 열거형
 #ifndef MODE_ENUM_H
 #define MODE_ENUM_H
 

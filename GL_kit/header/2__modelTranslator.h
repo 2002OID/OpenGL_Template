@@ -1,4 +1,4 @@
-//  ¸ðµ¨ º¯È¯
+// ¸ðµ¨ º¯È¯
 #ifndef MODEL_TRANSLATOR_H
 #define MODEL_TRANSLATOR_H
 #include <gl/glm/glm.hpp> 

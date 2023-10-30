@@ -1,5 +1,5 @@
 // 키보드 조작
-#include "GL_keyOperator.h"
+#include "GL_func.h"
 
 void keyDown(unsigned char KEY, int x, int y) {
 	switch (KEY) {

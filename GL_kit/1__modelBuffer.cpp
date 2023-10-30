@@ -1,4 +1,4 @@
-// 버퍼 초기화
+// 모델 버퍼
 #include "1__modelBuffer.h"
 #include "cube_ebo.cpp"
 

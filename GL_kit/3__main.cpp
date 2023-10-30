@@ -11,8 +11,7 @@
 #include "2__modelTranslator.h"
 #include "3__modeEnum.h"
 #include "4__modelCounts.h"
-#include "GL_keyOperator.h"
-#include "GL_timerOperator.h"
+#include "GL_func.h"
 #define WIDTH 800  
 #define HEIGHT 800
 #define X_POS 450

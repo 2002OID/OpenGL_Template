@@ -1,4 +1,4 @@
-//  셰이더 프로그램 생성
+// 셰이더 프로그램 생성
 #ifndef SHADER_LOADER_H
 #define SHADER_LOADER_H
 #define _CRT_SECURE_NO_WARNINGS
