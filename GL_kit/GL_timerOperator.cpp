@@ -1,4 +1,5 @@
-#include "GL_header.h"
+// ≈∏¿Ã∏”
+#include "GL_timerOperator.h"
 
 void timerOperation(int value) {
 

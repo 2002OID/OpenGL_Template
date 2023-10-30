@@ -1,4 +1,9 @@
-#include "GL_header.h"
+// 셰이더 프로그램 생성
+#include "0__shaderLoader.h"
+
+GLchar* vertexSource, * fragmentSource;
+GLuint vertexShader, fragmentShader;
+extern GLuint ID;
 
 char* loadBuffer(const char* file) {
 	FILE* fptr; long length; char* buf;
@@ -17,7 +22,7 @@ char* loadBuffer(const char* file) {
 }
 
 void makeVertexShader() {
-	vertexSource = loadBuffer("7__vertex.glsl");
+	vertexSource = loadBuffer("GLSL_vertex.glsl");
 	vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	glShaderSource(vertexShader, 1, (const GLchar**)&vertexSource, 0);
 	glCompileShader(vertexShader);
@@ -33,7 +38,7 @@ void makeVertexShader() {
 }
 
 void makeFragProgram() {
-	fragmentSource = loadBuffer("8__fragment.glsl");
+	fragmentSource = loadBuffer("GLSL_fragment.glsl");
 	fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
 	glShaderSource(fragmentShader, 1, (const GLchar**)&fragmentSource, 0);
 	glCompileShader(fragmentShader);
