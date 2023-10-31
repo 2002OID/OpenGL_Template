@@ -1,6 +1,7 @@
 // 모드 열거형
-#ifndef MODE_ENUM_H
-#define MODE_ENUM_H
+#ifndef CONFIG_H
+#define CONFIG_H
+
 #define MODEL_COUNTS 0
 
 enum bufferMode {

@@ -1,6 +1,6 @@
-// ¸ðµ¨ ¹öÆÛ
+// Â¸Ã°ÂµÂ¨ Â¹Ã¶Ã†Ã›
 #include "1__modelBuffer.h"
-#include "cube_ebo.cpp"
+//#include "cube_ebo.cpp"
 
 extern GLuint VAO[MODEL_COUNTS];
 GLuint EBO, VBO[2];

@@ -7,8 +7,7 @@
 #include <gl/glew.h>
 #include <gl/freeglut.h>
 #include <gl/freeglut_ext.h>
-#include "4__modelCounts.h"
-#include "3__modeEnum.h"
+#include "GL_config.h"
 
 void setBuffer(int idx, int bufferMode);
 

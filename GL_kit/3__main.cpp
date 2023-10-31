@@ -9,8 +9,7 @@
 #include "0__shaderLoader.h"
 #include "1__modelBuffer.h"
 #include "2__modelTranslator.h"
-#include "3__modeEnum.h"
-#include "4__modelCounts.h"
+#include "GL_config.h"
 #include "GL_func.h"
 #define WIDTH 800  
 #define HEIGHT 800
