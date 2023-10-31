@@ -1,13 +1,7 @@
 // Å¥ºê EBO ÁÂÇ¥
-#include <gl/glm/glm.hpp> 
-#include <gl/glm/ext.hpp> 
-#include <gl/glm/gtc/matrix_transform.hpp>
-#include <gl/glew.h>
-#include <gl/freeglut.h>
-#include <gl/freeglut_ext.h>
-#pragma warning(disable: 4305)
+#include "config.h"
 
-const GLfloat cube[][3] = {
+const GLfloat vertexCube[][3] = {
 	// front
 	{-0.1, -0.1,  0.1},
 	{0.1, -0.1,  0.1 },
@@ -18,17 +12,6 @@ const GLfloat cube[][3] = {
 	{ 0.1, -0.1, -0.1},
 	{ 0.1,  0.1, -0.1},
 	{ -0.1,  0.1, -0.1}
-};
-
-const GLfloat colorCube[][3] = {
-	{0.2, 0.2, 0.2},
-	{1.0, 0.0, 0.0},
-	{1.0, 1.0, 0.0},
-	{0.0, 1.0, 0.0},
-	{0.0, 0.0, 1.0},
-	{1.0, 0.0, 1.0},
-	{1.0, 1.0, 1.0},
-	{0.0, 1.0, 1.0},
 };
 
 const GLuint idxCube[] = {
@@ -50,4 +33,15 @@ const GLuint idxCube[] = {
 	// top
 	3, 2, 6,
 	6, 7, 3,
+};
+
+const GLfloat colorCube[][3] = {
+	{0.2, 0.2, 0.2},
+	{1.0, 0.0, 0.0},
+	{1.0, 1.0, 0.0},
+	{0.0, 1.0, 0.0},
+	{0.0, 0.0, 1.0},
+	{1.0, 0.0, 1.0},
+	{1.0, 1.0, 1.0},
+	{0.0, 1.0, 1.0},
 };

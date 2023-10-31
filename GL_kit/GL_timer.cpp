@@ -1,5 +1,5 @@
 // ≈∏¿Ã∏”
-#include "GL_func.h"
+#include "gl_func.h"
 
 void timerOperation(int value) {
 

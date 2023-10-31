@@ -1,5 +1,5 @@
 // 셰이더 프로그램 생성
-#include "0__shaderLoader.h"
+#include "shader.h"
 
 GLchar* vertexSource, * fragmentSource;
 GLuint vertexShader, fragmentShader;

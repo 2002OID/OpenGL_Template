@@ -1,11 +1,11 @@
-// 쨍챨쨉짢 쨔철횈횤
-#include "1__modelBuffer.h"
-//#include "cube_ebo.cpp"
+// 모델 버퍼 
+#include "buffer.h"
+//모델 좌표 cpp파일은 여기에 임포트 -> ex) #include "cube_ebo.cpp"
 
-extern GLuint VAO[MODEL_COUNTS];
+extern GLuint VAO[MODEL_COUNT];  // MODEL_COUNT는 config.h에 정의되어있음
 GLuint EBO, VBO[2];
 
-void setBuffer(int idx, int bufferMode) {
+void setBuffer(int idx, int bufferMode) {  // 반드시 케이스 문 안쪽에만 코드를 작성해야 함. 외부에 추가 작성 시 제대로 동작하지 않을 수 있음.
 	if (bufferMode == modeInit) {
 		glGenVertexArrays(1, &VAO[idx]);
 		glBindVertexArray(VAO[idx]);
