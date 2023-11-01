@@ -1,4 +1,4 @@
-// 변수 열거형 및 모델 출력 개수는 이곳에 선언 
+// 전역 변수, 변수 열거형, 모델 출력 개수는 이곳에 선언 
 // 프로젝트의 중요 헤더 파일들은 이 파일이 담당 
 // 나머지 헤더 파일들은 이 파일에 대해 의존성을 가지고 있기 때문에 이 파일을 절대 삭제해서는 안됨.
 #ifndef CONFIG_H
@@ -13,6 +13,12 @@
 #include <gl/freeglut.h>
 #include <gl/freeglut_ext.h>
 #include <iostream>
+
+#define WIDTH 800  
+#define HEIGHT 800
+#define X_POS 450
+#define Y_POS 50
+
 using namespace std;
 
 #define MODEL_COUNT 1
