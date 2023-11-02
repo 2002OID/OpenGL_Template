@@ -35,10 +35,10 @@ void setProjection(int projectionMode) {  // Åõ¿µ
 	projection = mat4(1.0f);
 	switch (projectionMode) {
 	case modePers:
-		projection = perspective(radians(45.0f), 1.0f, 0.1f, 1.0f);
+		projection = perspective(radians(45.0f), 1.0f, 0.1f, 100.0f);
 		break;
 	case modeOrtho:
-		projection = ortho(-1.0f, 1.0f, -1.0f, 1.0f, -1.0f, 1.0f);
+		projection = ortho(-3.0f, 3.0f, -3.0f, 3.0f, 1.0f, 100.0f);
 		break;
 	}
 }
