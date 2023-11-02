@@ -6,13 +6,11 @@ extern GLuint VAO[MODEL_COUNT];  // MODEL_COUNT는 config.h에 정의되어있음
 GLuint EBO, VBO[2];
 
 void vertexInput(int idx) {  // vertex
-	glBindBuffer(GL_ARRAY_BUFFER, VBO[0]);
 	switch (idx) {
 	case 0:
 		//glBufferData(GL_ARRAY_BUFFER, sizeof(), , GL_STATIC_DRAW);
 		break;
 	}
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 }
 
 void eboInput(int idx) {  // ebo
