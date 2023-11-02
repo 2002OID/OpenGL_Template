@@ -4,5 +4,8 @@
 #include "config.h"
 
 void setBuffer(int idx, int bufferMode);
+void vertexInput(int idx);
+void eboInput(int idx);
+void colorInput(int idx);
 
 #endif
