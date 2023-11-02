@@ -1,8 +1,8 @@
-// ¸ğµ¨ ¹öÆÛ 
+// ëª¨ë¸ ë²„í¼ 
 #include "buffer.h"
-//¸ğµ¨ ÁÂÇ¥ cppÆÄÀÏÀº ¿©±â¿¡ ÀÓÆ÷Æ® -> ex) #include "cube_ebo.cpp"
+//ëª¨ë¸ ì¢Œí‘œ cppíŒŒì¼ì€ ì—¬ê¸°ì— ì„í¬íŠ¸ -> ex) #include "cube_ebo.cpp"
 
-extern GLuint VAO[MODEL_COUNT];  // MODEL_COUNT´Â config.h¿¡ Á¤ÀÇµÇ¾îÀÖÀ½
+extern GLuint VAO[MODEL_COUNT];  // MODEL_COUNTëŠ” config.hì— ì •ì˜ë˜ì–´ìˆìŒ
 GLuint EBO, VBO[2];
 
 void vertexInput(int idx) {  // vertex
@@ -29,7 +29,7 @@ void colorInput(int idx) {  // color
 	}
 }
 
-void setBuffer(int idx, int bufferMode) {  // ¹İµå½Ã ÄÉÀÌ½º ¹® ¾ÈÂÊ¿¡¸¸ ÄÚµå¸¦ ÀÛ¼ºÇØ¾ß ÇÔ. ¿ÜºÎ¿¡ Ãß°¡ ÀÛ¼º ½Ã Á¦´ë·Î µ¿ÀÛÇÏÁö ¾ÊÀ» ¼ö ÀÖÀ½.
+void setBuffer(int idx, int bufferMode) {  // ë°˜ë“œì‹œ ì¼€ì´ìŠ¤ ë¬¸ ì•ˆìª½ì—ë§Œ ì½”ë“œë¥¼ ì‘ì„±í•´ì•¼ í•¨. ì™¸ë¶€ì— ì¶”ê°€ ì‘ì„± ì‹œ ì œëŒ€ë¡œ ë™ì‘í•˜ì§€ ì•Šì„ ìˆ˜ ìˆìŒ.
 	if (bufferMode == modeInit) {
 		glGenVertexArrays(1, &VAO[idx]);
 		glBindVertexArray(VAO[idx]);
