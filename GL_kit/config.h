@@ -4,8 +4,9 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 #define _CRT_SECURE_NO_WARNINGS
-#pragma warning(disable: 4305)  // 좌표 파일에서 발생하는 경고 무시
-#pragma warning(disable: 4326)  // main에서 발생하는 경고 무시
+#pragma warning(disable: 4305)
+#pragma warning(disable: 4326)
+#pragma warning(disable: 4244)
 #include <gl/glm/glm.hpp> //  이 include들을 다른데로 옮기지 말 것!
 #include <gl/glm/ext.hpp> 
 #include <gl/glm/gtc/matrix_transform.hpp>

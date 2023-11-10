@@ -7,7 +7,8 @@ void keyDown(unsigned char KEY, int x, int y) {
 		glutDestroyWindow(1);
 		break;
 	}
-	glutPostRedisplay();
+	if (glutGetWindow() != 0)
+		glutPostRedisplay();
 }
 
 void keyUp(unsigned char KEY, int x, int y) {
@@ -15,5 +16,6 @@ void keyUp(unsigned char KEY, int x, int y) {
 	case 0:
 		break;
 	}
-	glutPostRedisplay();
+	if (glutGetWindow() != 0)
+		glutPostRedisplay();
 }
