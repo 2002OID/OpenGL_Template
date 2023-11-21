@@ -1,13 +1,13 @@
-// Àü¿ª º¯¼ö, º¯¼ö ¿­°ÅÇü, ¸ðµ¨ Ãâ·Â °³¼ö´Â ÀÌ°÷¿¡ ¼±¾ð 
-// ÇÁ·ÎÁ§Æ®ÀÇ Áß¿ä Çì´õ ÆÄÀÏµéÀº ÀÌ ÆÄÀÏÀÌ ´ã´ç 
-// ³ª¸ÓÁö Çì´õ ÆÄÀÏµéÀº ÀÌ ÆÄÀÏ¿¡ ´ëÇØ ÀÇÁ¸¼ºÀ» °¡Áö°í ÀÖ±â ¶§¹®¿¡ ÀÌ ÆÄÀÏÀ» Àý´ë »èÁ¦ÇØ¼­´Â ¾ÈµÊ.
+ï»¿// ì „ì—­ ë³€ìˆ˜, ë³€ìˆ˜ ì—´ê±°í˜•, ëª¨ë¸ ì¶œë ¥ ê°œìˆ˜ëŠ” ì´ê³³ì— ì„ ì–¸ 
+// í”„ë¡œì íŠ¸ì˜ ì¤‘ìš” í—¤ë” íŒŒì¼ë“¤ì€ ì´ íŒŒì¼ì´ ë‹´ë‹¹ 
+// ë‚˜ë¨¸ì§€ í—¤ë” íŒŒì¼ë“¤ì€ ì´ íŒŒì¼ì— ëŒ€í•´ ì˜ì¡´ì„±ì„ ê°€ì§€ê³  ìžˆê¸° ë•Œë¬¸ì— ì´ íŒŒì¼ì„ ì ˆëŒ€ ì‚­ì œí•´ì„œëŠ” ì•ˆë¨.
 #ifndef CONFIG_H
 #define CONFIG_H
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable: 4305)
 #pragma warning(disable: 4326)
 #pragma warning(disable: 4244)
-#include <gl/glm/glm.hpp> //  ÀÌ includeµéÀ» ´Ù¸¥µ¥·Î ¿Å±âÁö ¸» °Í!
+#include <gl/glm/glm.hpp> //  ì´ includeë“¤ì„ ë‹¤ë¥¸ë°ë¡œ ì˜®ê¸°ì§€ ë§ ê²ƒ!
 #include <gl/glm/ext.hpp> 
 #include <gl/glm/gtc/matrix_transform.hpp>
 #include <gl/glew.h>
@@ -24,10 +24,10 @@ using namespace std;
 
 #define MODEL_COUNT 1
 
-enum bufferMode {  // ¹öÆÛ ¸ðµå. ¹öÆÛ ÃÊ±âÈ­ ½Ã modeInit »ç¿ë, EBO ¾÷µ¥ÀÌÆ® ½Ã modeUpdate »ç¿ë 
+enum bufferMode {  // ë²„í¼ ëª¨ë“œ. ë²„í¼ ì´ˆê¸°í™” ì‹œ modeInit ì‚¬ìš©, EBO ì—…ë°ì´íŠ¸ ì‹œ modeUpdate ì‚¬ìš© 
 	modeInit, modeUpdate
 };
-enum projectionMode {  // ¿ø±Ù Åõ¿µ / Á÷°¢ Åõ¿µ. ±âº» ¿ø±Ù Åõ¿µ 
+enum projectionMode {  // ì›ê·¼ íˆ¬ì˜ / ì§ê° íˆ¬ì˜. ê¸°ë³¸ ì›ê·¼ íˆ¬ì˜ 
 	modeOrtho, modePers
 };
 

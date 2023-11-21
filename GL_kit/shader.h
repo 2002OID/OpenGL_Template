@@ -1,4 +1,4 @@
-// ╪нюл╢У га╥н╠в╥╔ ╩Щ╪╨
+О╩©// Л┘╟Л²╢К█■ М■└К║°Й╥╦К·╗ Л┐²Л└╠
 #ifndef SHADER_LOADER_H
 #define SHADER_LOADER_H
 #include "config.h"

@@ -1,4 +1,4 @@
-// OpenGL ±â´É ÇÔ¼ö´Â ¿©±â¿¡ Á¤ÀÇ
+ï»¿// OpenGL ê¸°ëŠ¥ í•¨ìˆ˜ëŠ” ì—¬ê¸°ì— ì •ì˜
 #ifndef GL_FUNC_H
 #define GL_FUNC_H
 #include "config.h"

@@ -1,9 +1,9 @@
-// ¼ÎÀÌ´õ ÇÁ·Î±×·¥ »ı¼º
+ï»¿// ì…°ì´ë” í”„ë¡œê·¸ë¨ ìƒì„±
 #include "shader.h"
 
 GLchar* vertexSource, * fragmentSource;
 GLuint vertexShader, fragmentShader;
-extern GLuint ID;
+GLuint ID;
 
 char* loadBuffer(const char* file) {
 	FILE* fptr; long length; char* buf;

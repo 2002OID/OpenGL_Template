@@ -1,25 +1,26 @@
-#include "config.h"  // Áß¿ä Çì´õ ÆÄÀÏ
-#include "shader.h"  // ¼ÎÀÌ´õ »ı¼º
-#include "buffer.h"  // ¹öÆÛ
-#include "translate.h"  // º¯È¯
-#include "gl_func.h"  // GL ±â´É ÇÔ¼ö
+ï»¿#include "config.h"  // ì¤‘ìš” í—¤ë” íŒŒì¼
+#include "shader.h"  // ì…°ì´ë” ìƒì„±
+#include "buffer.h"  // ë²„í¼
+#include "translate.h"  // ë³€í™˜
+#include "gl_func.h"  // GL ê¸°ëŠ¥ í•¨ìˆ˜
 
-GLuint ID;
-int projectionMode = modePers;  // Á÷°¢Åõ¿µ/¿ø±ÙÅõ¿µ, ±âº» ¿ø±ÙÅõ¿µ ¸ğµå, modeOrtho·Î º¯°æ ½Ã ¾Ë¾Æ¼­ ¹Ù²ñ
+extern GLuint ID;
+int projectionMode = modePers;  // ì§ê°íˆ¬ì˜/ì›ê·¼íˆ¬ì˜, ê¸°ë³¸ ì›ê·¼íˆ¬ì˜ ëª¨ë“œ, modeOrthoë¡œ ë³€ê²½ ì‹œ ì•Œì•„ì„œ ë°”ë€œ
 
 GLvoid displayOutput() {
 	glClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);  
 	glUseProgram(ID);
 	
-	setCamera(); // ÀÌ ºÎºĞÀº ¿©±â¼­ °Çµé ÇÊ¿ä ¾øÀ½
-	setProjection(projectionMode); // ÀÌ ºÎºĞÀº ¿©±â¼­ °Çµé ÇÊ¿ä ¾øÀ½
+	setCamera(); // ì´ ë¶€ë¶„ì€ ì—¬ê¸°ì„œ ê±´ë“¤ í•„ìš” ì—†ìŒ
+	setProjection(projectionMode); // ì´ ë¶€ë¶„ì€ ì—¬ê¸°ì„œ ê±´ë“¤ í•„ìš” ì—†ìŒ
+	setLight();
 
-	// MODEL_COUNT´Â config.h¿¡ Á¤ÀÇµÇ¾îÀÖÀ½
-	for (int i = 0; i < MODEL_COUNT; i++) {  // MODEL_COUNT ¸¸Å­ ¹İº¹¹®À» µ¹¸ç º¯È¯°ú Ãâ·Â ¹İº¹
-		setTransform(i);  // º¯È¯ ¼¼ÆÃ
-		finishTransform(i); // º¯È¯À» glsl·Î Àü´Ş
-		modelOutput(i);  // ÃÖÁ¾ Ãâ·Â, 3°³ ÇÔ¼ö ¸ğµÎ modelOutput.cpp¿¡ ÀÖÀ½
+	// MODEL_COUNTëŠ” config.hì— ì •ì˜ë˜ì–´ìˆìŒ
+	for (int i = 0; i < MODEL_COUNT; i++) {  // MODEL_COUNT ë§Œí¼ ë°˜ë³µë¬¸ì„ ëŒë©° ë³€í™˜ê³¼ ì¶œë ¥ ë°˜ë³µ
+		setTransform(i);  // ë³€í™˜ ì„¸íŒ…
+		finishTransform(i); // ë³€í™˜ì„ glslë¡œ ì „ë‹¬
+		modelOutput(i);  // ìµœì¢… ì¶œë ¥, 3ê°œ í•¨ìˆ˜ ëª¨ë‘ modelOutput.cppì— ìˆìŒ
 	}
 	
 	glutSwapBuffers();
@@ -30,24 +31,26 @@ GLvoid displayReshape(int w, int h) {
 }
 
 void main(int argc, char** argv) {
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GL_MULTISAMPLE);
-	glutInitWindowPosition(X_POS, Y_POS);
-	glutInitWindowSize(WIDTH, HEIGHT);
-	glutCreateWindow("OpenGL");
-	glewExperimental = GL_TRUE;
-	if (glewInit() != GLEW_OK) {
-		cerr << "Unable to initialize GLEW" << endl;  exit(EXIT_FAILURE);
-	}
-	else cout << "GLEW Initialized" << endl;
-		
-	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_MULTISAMPLE);
-	makeShaderProgram();
+	{  // fold here
+		glutInit(&argc, argv);
+		glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GL_MULTISAMPLE);
+		glutInitWindowPosition(X_POS, Y_POS);
+		glutInitWindowSize(WIDTH, HEIGHT);
+		glutCreateWindow("OpenGL");
+		glewExperimental = GL_TRUE;
+		if (glewInit() != GLEW_OK) {
+			cerr << "Unable to initialize GLEW" << endl;  exit(EXIT_FAILURE);
+		}
+		else cout << "GLEW Initialized" << endl;
 
-	// MODEL_COUNT´Â config.h¿¡ Á¤ÀÇµÇ¾îÀÖÀ½
-	for(int i = 0; i < MODEL_COUNT; i ++)  // MODEL_COUNT ¸¸Å­ ¹öÆÛ ÃÊ±âÈ­
-		setBuffer(i, modeInit);  // modelBuffer.cpp¿¡ ÀÖÀ½
+		glEnable(GL_DEPTH_TEST);
+		glEnable(GL_MULTISAMPLE);
+		makeShaderProgram();
+	}
+
+	// MODEL_COUNTëŠ” config.hì— ì •ì˜ë˜ì–´ìˆìŒ
+	for(int i = 0; i < MODEL_COUNT; i ++)  // MODEL_COUNT ë§Œí¼ ë²„í¼ ì´ˆê¸°í™”
+		setBuffer(i, modeInit);  // modelBuffer.cppì— ìˆìŒ
 	
 	glutDisplayFunc(displayOutput);
 	glutReshapeFunc(displayReshape);

@@ -1,4 +1,4 @@
-// Ÿ�̸�
+﻿// 타이머
 #include "gl_func.h"
 
 void timerOperation(int value) {

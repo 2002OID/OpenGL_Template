@@ -1,4 +1,4 @@
-// Å°º¸µå Á¶ÀÛ
+ï»¿// í‚¤ë³´ë“œ ì¡°ìž‘
 #include "gl_func.h"
 
 void keyDown(unsigned char KEY, int x, int y) {
