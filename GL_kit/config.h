@@ -24,7 +24,7 @@ using namespace std;
 
 #define MODEL_COUNT 1
 
-enum bufferMode {  // 버퍼 모드. 버퍼 초기화 시 modeInit 사용, EBO 업데이트 시 modeUpdate 사용 
+enum bufferMode {  // 버퍼 모드. 버퍼 초기화 시 modeInit 사용, 버텍스 업데이트 시 modeUpdate 사용 
 	modeInit, modeUpdate
 };
 enum projectionMode {  // 원근 투영 / 직각 투영. 기본 원근 투영 
