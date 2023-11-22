@@ -6,7 +6,7 @@ extern GLuint ID;
 extern GLuint VAO[MODEL_COUNT];  // MODEL_COUNT는 config.h에 정의되어있음
 
 glm::vec3 cameraPos, cameraDirection, cameraUp, lightPos;
-glm::mat4 transformMatrix, view, projection;
+glm::mat4 transformMatrix, view, projection, lightMatrix;
 
 unsigned int projectionLocation, viewLocation, modelLocation, viewPosLocation;
 unsigned int lightPosLocation, lightColorLocation, objColorLocation;
@@ -61,7 +61,10 @@ void setProjection(int projectionMode) {  // 투영 세팅
 
 void setLight() {  // 조명 세팅
 	using namespace glm;
-	lightPos = vec3(0.0f, 0.0f, 1.0f);  // 조명 위치
+	lightMatrix = mat4(1.0f);
+	lightPos = vec3(0.0f, 0.0f, 3.0f);  // 조명 위치
+	vec3 initialLightPos = vec3(lightPos.x, lightPos.y, lightPos.z);
+	lightPos = lightMatrix * vec4(initialLightPos, 1.0f);
 }
 
 void setTransform(int idx) {  // 변환 세팅
