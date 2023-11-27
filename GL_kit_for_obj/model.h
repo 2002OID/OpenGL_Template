@@ -2,9 +2,9 @@
 #include "config.h"
 
 struct Vertex {
-    vec3 position;
-    vec3 normal;
-    vec2 texCoords; // 추가된 부분
+    glm::vec3 position;
+    glm::vec3 normal;
+    glm::vec2 texCoords; // 추가된 부분
  };
 
 GLuint loadObj(const char* filename, vector<Vertex>& vertices);
