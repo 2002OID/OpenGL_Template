@@ -14,6 +14,7 @@
 #include <gl/freeglut.h>
 #include <gl/freeglut_ext.h>
 #include <iostream>
+#include <vector>
 #include <fstream>
 #include <sstream>
 
