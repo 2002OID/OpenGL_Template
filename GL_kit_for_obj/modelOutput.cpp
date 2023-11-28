@@ -6,7 +6,7 @@ extern GLuint ID;
 extern GLuint VAO[MODEL_COUNT];  // MODEL_COUNT는 config.h에 정의되어있음
 
 glm::vec3 cameraPos, cameraDirection, cameraUp, lightPos, objColor;
-glm::mat4 finalMatrix, view, projection, lightMatrix, scaleMatrix, rotateMatrix, translateMatrix;
+glm::mat4 transformMatrix, view, projection, lightMatrix, scaleMatrix, rotateMatrix, translateMatrix;
 
 unsigned int projectionLocation, viewLocation, modelLocation, viewPosLocation;
 unsigned int lightPosLocation, lightColorLocation, objColorLocation;
