@@ -16,7 +16,7 @@ GLvoid displayOutput() {
 	setProjection(projectionMode); // 이 부분은 여기서 건들 필요 없음
 	setLight();
 
-	// MODEL_COUNT는 config.h에 정의되어있음
+	// MODEL_COUNT는 config.h에 정의되어있음	
 	for (int i = 0; i < MODEL_COUNT; i++) {  // MODEL_COUNT 만큼 반복문을 돌며 변환과 출력 반복
 		setTransform(i);  // 변환 세팅
 		finishTransform(i); // 변환을 glsl로 전달
@@ -50,7 +50,7 @@ void main(int argc, char** argv) {
 
 	// MODEL_COUNT는 config.h에 정의되어있음
 	for(int i = 0; i < MODEL_COUNT; i ++)  // MODEL_COUNT 만큼 버퍼 초기화
-		setBuffer(i, modeInit);  // modelBuffer.cpp에 있음
+		setBuffer(i);  // modelBuffer.cpp에 있음
 	
 	glutDisplayFunc(displayOutput);
 	glutReshapeFunc(displayReshape);

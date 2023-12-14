@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="main">
+      <UniqueIdentifier>{6a9a9cf1-dfe3-4fca-bc2b-7217ba412c74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kit">
+      <UniqueIdentifier>{acbd4c8a-e900-40f1-a4b1-056df50078dd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="buffer.h">
+      <Filter>kit</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>kit</Filter>
+    </ClInclude>
+    <ClInclude Include="gl_func.h">
+      <Filter>kit</Filter>
+    </ClInclude>
+    <ClInclude Include="model.h">
+      <Filter>kit</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.h">
+      <Filter>kit</Filter>
+    </ClInclude>
+    <ClInclude Include="translate.h">
+      <Filter>kit</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="GL_key.cpp">
+      <Filter>kit</Filter>
+    </ClCompile>
+    <ClCompile Include="GL_timer.cpp">
+      <Filter>kit</Filter>
+    </ClCompile>
+    <ClCompile Include="makeShader.cpp">
+      <Filter>kit</Filter>
+    </ClCompile>
+    <ClCompile Include="modelBuffer.cpp">
+      <Filter>kit</Filter>
+    </ClCompile>
+    <ClCompile Include="modelLoader.cpp">
+      <Filter>kit</Filter>
+    </ClCompile>
+    <ClCompile Include="modelOutput.cpp">
+      <Filter>kit</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GLSL_fragment.glsl">
+      <Filter>kit</Filter>
+    </None>
+    <None Include="GLSL_vertex.glsl">
+      <Filter>kit</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="User guide.txt" />
+  </ItemGroup>
+</Project>

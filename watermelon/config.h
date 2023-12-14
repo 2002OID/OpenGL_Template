@@ -7,26 +7,27 @@
 #pragma warning(disable: 4305)
 #pragma warning(disable: 4326)
 #pragma warning(disable: 4244)
-#include <gl/glm/glm.hpp> //  이 include들을 다른데로 옮기지 말 것!
-#include <gl/glm/ext.hpp> 
-#include <gl/glm/gtc/matrix_transform.hpp>
+#include <gl/glm/glm/glm.hpp> //  이 include들을 다른데로 옮기지 말 것!
+#include <gl/glm/glm/ext.hpp> 
+#include <gl/glm/glm/gtc/matrix_transform.hpp>
 #include <gl/glew.h>
 #include <gl/freeglut.h>
 #include <gl/freeglut_ext.h>
+#include <gl/glm/glm/glm.hpp>
 #include <iostream>
+#include <vector>
+#include <fstream>
+#include <sstream>
 
-#define WIDTH 800  
+#define WIDTH 1500
 #define HEIGHT 800
-#define X_POS 450
+#define X_POS 100
 #define Y_POS 50
 
 using namespace std;
 
 #define MODEL_COUNT 1
 
-enum bufferMode {  // 버퍼 모드. 버퍼 초기화 시 modeInit 사용, 버텍스 업데이트 시 modeUpdate 사용 
-	modeInit, modeUpdate
-};
 enum projectionMode {  // 원근 투영 / 직각 투영. 기본 원근 투영 
 	modeOrtho, modePers
 };
